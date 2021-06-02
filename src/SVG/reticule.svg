@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 8.4666667 8.4666667"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="reticule.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="29.03125"
+     inkscape:cx="16.103337"
+     inkscape:cy="15.552207"
+     inkscape:window-width="3440"
+     inkscape:window-height="1377"
+     inkscape:window-x="1912"
+     inkscape:window-y="282"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:#4d00ff;stroke-width:0.522023;stroke-opacity:1"
+       id="rect1041"
+       width="0.24607104"
+       height="2.2237532"
+       x="4.0875134"
+       y="5.9740582" />
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:#4d00ff;stroke-width:0.522023;stroke-opacity:1"
+       id="rect1041-0"
+       width="0.24607104"
+       height="2.2237532"
+       x="4.1771941"
+       y="-2.4966891"
+       transform="rotate(89.872184)" />
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:#4d00ff;stroke-width:0.522023;stroke-opacity:1"
+       id="rect1041-0-3"
+       width="0.24607104"
+       height="2.2237532"
+       x="4.1989942"
+       y="-8.18363"
+       transform="rotate(89.872184)" />
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:#4d00ff;stroke-width:0.522023;stroke-opacity:1"
+       id="rect1041-3"
+       width="0.24607104"
+       height="2.2237532"
+       x="4.0875134"
+       y="0.26885518" />
+    <ellipse
+       style="fill:#4d00ff;fill-opacity:1;stroke:#4d00ff;stroke-width:0.309787;stroke-opacity:1"
+       id="path1811"
+       cx="4.2333331"
+       cy="4.2789016"
+       rx="0.4023146"
+       ry="0.36585969" />
+  </g>
+</svg>

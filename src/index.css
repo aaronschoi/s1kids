@@ -1,0 +1,94 @@
+* {
+  background: orange;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.S1KTitle, .social-media, .header-link, .non-title-links, .persistent-header, .footer {
+  background: #ffeadb;
+}
+
+.social-media, .backdrop, .header-link {
+  cursor: url(./SVG/reticule.svg), auto;
+}
+
+.S1KTitle {
+  height: 8vh;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+.social-media {
+  height: 4vh;
+}
+
+.social-media, .header-link {
+  margin: 0 10px;
+}
+
+.non-title-links {
+  display: flex;
+}
+
+.persistent-header {
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  top: 0px;
+  box-shadow: 0 0 10px black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+h2 {
+  padding-top: 20px;
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+
+.content {
+}
+
+.backdrop {
+  height: 70vh;
+}
+
+.main-paragraph {
+  font-size: 30px;
+}
+
+.backdrop-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  box-shadow: 0 -5px 5px rgba(0,0,0,0.8);
+}
