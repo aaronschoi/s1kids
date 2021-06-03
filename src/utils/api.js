@@ -32,7 +32,7 @@ const list = async (param, signal) => {
   return await fetchJson(url, { headers, signal }, []);
 };
 
-const postOrPut = async (param, data, method, signal) => {
+const generalAPIcall = async (param, data, method, signal) => {
   const url = `${API_BASE_URL}/${param}`;
   return await fetchJson(
     url,
@@ -48,5 +48,5 @@ const postOrPut = async (param, data, method, signal) => {
 
 module.exports = {
   list,
-  postOrPut
+  generalAPIcall
 };

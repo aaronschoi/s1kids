@@ -34,7 +34,7 @@ export default function Contact() {
                         <textarea name="message" value={formData.message} placeholder="Something will be written here" onChange={changeHandler}/>
                     </label>
                 </div>
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Submit" className="submit"/>
             </form>
         </div>
     )

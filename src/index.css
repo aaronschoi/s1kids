@@ -32,7 +32,7 @@ b {
 
 .social-media,
 .backdrop,
-.header-link {
+.header-link, .submit {
   cursor: url(./SVG/reticule.svg), auto;
 }
 
