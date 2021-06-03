@@ -32,6 +32,21 @@ const list = async (param, signal) => {
   return await fetchJson(url, { headers, signal }, []);
 };
 
+const postOrPut = async (param, data, method, signal) => {
+  const url = `${API_BASE_URL}/${param}`;
+  return await fetchJson(
+    url,
+    {
+      body: JSON.stringify({ data }),
+      headers,
+      method: `${method}`,
+      signal,
+    },
+    []
+  );
+}
+
 module.exports = {
   list,
+  postOrPut
 };
