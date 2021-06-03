@@ -1,47 +1,58 @@
+import { Link } from 'react-router-dom';
+
 export default function Header() {
 
   const audio = new Audio('./Sound/USP-S.mp3')
   audio.volume = .1;
   
   const handleClick = event => {
-    event.preventDefault();
     audio.play();
   }
 
   return (
     <header className="persistent-header">
+      <Link className="header-link" to="/">
       <img
         className="S1KTitle"
         src={require("../SVG/S1KTitle.svg").default}
         alt="S1Kids."
         onMouseDown={handleClick}
       />
+      </Link>
       <div className="non-title-links">
-      <a className="header-link" rel="noreferrer" target="_blank" href="*">
+      <Link className="header-link" to="/admin">
+      <img
+        className="social-media"
+        src={require("../SVG/gear.svg").default}
+        alt="Admin"
+        onClick={handleClick}
+      />
+      </Link>
+      <Link className="header-link" to="/roster">
       <img
         className="social-media"
         src={require("../SVG/team.svg").default}
         alt="Squad"
         onClick={handleClick}
       />
-      </a>
-      <a className="header-link" rel="noreferrer" target="_blank" href="*">
+      </Link>
+      <Link className="header-link" to="/schedule">
       <img
         className="social-media"
         src={require("../SVG/schedule.svg").default}
         alt="Schedule"
         onClick={handleClick}
       />
-      </a>
-      <a className="header-link" rel="noreferrer" target="_blank" href="*">
+      </Link>
+      <Link className="header-link" to="/contact">
           <img
         className="social-media"
         src={require("../SVG/service-headset.svg").default}
         alt="Resources"
         onClick={handleClick}
       />
-      </a>
-      <a className="header-link" rel="noreferrer" target="_blank" href="*">
+      </Link>
+      <a className="header-link" rel="noreferrer" target="_blank" href="https://discord.gg/mgrxSaMWKs">
       <img
         className="social-media"
         src={require("../SVG/Discord.svg").default}
@@ -49,7 +60,7 @@ export default function Header() {
         onClick={handleClick}
       />
       </a>
-      <a className="header-link" rel="noreferrer" target="_blank" href="*">
+      <a className="header-link" rel="noreferrer" target="_blank" href="https://steamcommunity.com/groups/s1kids">
       <img
         className="social-media"
         src={require("../SVG/Steam.svg").default}

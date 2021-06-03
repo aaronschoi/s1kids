@@ -5,37 +5,49 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.S1KTitle, .social-media, .header-link, .non-title-links, .persistent-header, .footer {
+.S1KTitle,
+.social-media,
+.header-link,
+.non-title-links,
+.persistent-header,
+.footer,
+.schedule-row,
+.schedule-element,
+.schedule-component,
+b {
   background: #ffeadb;
 }
 
-.social-media, .backdrop, .header-link {
+.social-media,
+.backdrop,
+.header-link {
   cursor: url(./SVG/reticule.svg), auto;
 }
 
 .S1KTitle {
   height: 8vh;
   margin: 0;
-  padding: 10px 20px;
+  padding: 10px 10px;
 }
 
 .social-media {
   height: 4vh;
 }
 
-.social-media, .header-link {
+.social-media,
+.header-link {
   margin: 0 10px;
 }
 
@@ -62,6 +74,8 @@ h2 {
 }
 
 .content {
+  height: 100vh;
+  margin-top: 100px;
 }
 
 .backdrop {
@@ -79,7 +93,6 @@ h2 {
 }
 
 .main {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -90,5 +103,72 @@ h2 {
   position: relative;
   width: 100%;
   height: 10vh;
-  box-shadow: 0 -5px 5px rgba(0,0,0,0.8);
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: baseline;
+}
+
+.roster {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.roster-component {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.player-icon {
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.player-card {
+  border-radius: 10%;
+  background: black;
+  padding: 50px;
+}
+
+.player-name,
+.player-description {
+  background: black;
+  color: #ffeadb;
+}
+
+.schedule {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.schedule-body {
+  background: black;
+  border-radius: 25px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-row {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 25px;
+  margin: 10px;
+}
+
+.schedule-element {
+  margin-right: 20px;
+  font-size: 25px;
+}
+
+.schedule-component {
+  display: flex;
+  padding: 5px;
 }
