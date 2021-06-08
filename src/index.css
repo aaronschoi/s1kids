@@ -30,18 +30,28 @@ code {
 .schedule-row,
 .schedule-element,
 .schedule-component,
-b, .message-component, .messages-header, .message {
+b,
+.message-component,
+.messages-header,
+.message {
   background: #ffeadb;
 }
 
-.messages, .player-name,
-.player-description, .player-card, .message-close, .submit {
+.messages,
+.player-name,
+.player-description,
+.player-card,
+.message-close,
+.submit {
   background: black;
 }
 
 .social-media,
 .backdrop,
-.header-link, .submit, .message-close {
+.header-link,
+.submit,
+.message-close,
+.dashboard-button {
   cursor: url(./SVG/reticule.svg), auto;
 }
 
@@ -185,11 +195,10 @@ h2 {
   flex-direction: column;
   background: black;
   align-items: center;
-  width: 50%;
+  width: 60%;
   height: 50vh;
   overflow: scroll;
-  margin: 30px;
-  margin-top: 200px;
+  margin: 25px;
   border-radius: 25px;
 }
 
@@ -207,7 +216,8 @@ h2 {
   margin: 20px;
 }
 
-.message-close, .submit {
+.message-close,
+.submit {
   color: #ffeadb;
   padding: 10px;
   width: 40px;
@@ -218,7 +228,7 @@ h2 {
 
 .message-component {
   margin: 5px;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .message-body {
@@ -228,7 +238,8 @@ h2 {
   padding: 10px;
 }
 
-.contact , .contact-form{
+.contact,
+.contact-form {
   display: flex;
   flex-direction: column;
 }
@@ -262,11 +273,11 @@ h2 {
 }
 
 .text-input {
-  width: 33%
+  width: 33%;
 }
 
 .message-input {
-  width: 66%
+  width: 66%;
 }
 
 .textarea {
@@ -301,4 +312,32 @@ h2 {
   font-size: 80px;
   padding: 10px;
   margin: 50px 0px;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 100px;
+  align-items: center;
+}
+
+.dashboard-controller {
+  display: flex;
+  padding: 25px;
+  background: black;
+  border-radius: 25px;
+  margin: 25px;
+  width: 60%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.dashboard-button {
+  background: #ffeadb;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 30px;
+  margin: 20px;
+  font-weight: bold;
 }
