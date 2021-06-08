@@ -19,7 +19,15 @@ export default function Roster() {
       <div className="roster-component">
         {roster.map((player) => {
           if (player.group === "core") {
-            return <Player key={player.id} player={player} />;
+            return (
+              <div
+                className="player-card"
+                key={player.player_id}
+                group={player.group}
+              >
+                <Player player={player} />
+              </div>
+            );
           }
           return null;
         })}
@@ -28,7 +36,15 @@ export default function Roster() {
       <div className="roster-component">
         {roster.map((player) => {
           if (player.group === "alternate") {
-            return <Player key={player.id} player={player} />;
+            return (
+              <div
+                className="player-card"
+                key={player.player_id}
+                group={player.group}
+              >
+                <Player player={player} />
+              </div>
+            );
           }
           return null;
         })}

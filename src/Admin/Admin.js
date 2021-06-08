@@ -10,6 +10,9 @@ export default function Admin() {
   });
   const [response, setResponse] = useState(false);
   const [adminError, setAdminError] = useState(null);
+  
+  const audio = new Audio('./Sound/USP-S.mp3')
+  audio.volume = .1;
 
   const changeHandler = (event) => {
     setLoginInfo({
@@ -20,6 +23,7 @@ export default function Admin() {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    audio.play();
     const controller = new AbortController();
     generalAPIcall("admin", loginInfo, "DELETE", controller.signal)
       .then((data) => setResponse(data.passwordFound))

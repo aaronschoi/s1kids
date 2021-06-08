@@ -13,6 +13,9 @@ export default function Contact() {
 
   const [success, setSuccess] = useState(0);
 
+  const audio = new Audio('./Sound/USP-S.mp3')
+  audio.volume = .1;
+
   const changeHandler = (event) => {
     setFormData({
       ...formData,
@@ -22,6 +25,7 @@ export default function Contact() {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    audio.play();
     const controller = new AbortController();
     generalAPIcall("messages", formData, "POST", controller.signal)
       .then(() =>
