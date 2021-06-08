@@ -28,30 +28,29 @@ export default function Admin() {
   };
 
   return (
-    <div>
+    <div className="admin">
       {!response ? (
-        <div>
+        <div className="login-form">
           <Error error={adminError} />
-          <h4>Login</h4>
-          <h3>Sorry but you'll have to relogin every time you want to enter this page.</h3>
-          <form onSubmit={submitHandler}>
-            <div>
+          <h4 className="login-header">Login.</h4>
+          <h3>*Sorry but you'll have to relogin every time you want to enter this page.*</h3>
+          <form onSubmit={submitHandler} className="login-form-body">
               <input
                 name="username"
                 type="text"
                 value={loginInfo.username}
                 placeholder="Username"
                 onChange={changeHandler}
+                className="form-input login-input"
               />
-            </div>
-            <div>
               <input
                 name="password"
+                type="password"
                 value={loginInfo.password}
                 placeholder="Password"
                 onChange={changeHandler}
+                className="form-input login-input"
               />
-            </div>
             <input type="submit" value="Submit" className="submit" />
           </form>
         </div>

@@ -22,8 +22,14 @@ const formatScheduleDate = day => {
     return `${dayArray[1]}/${formattedDay.join("")}/${dayArray[0]}`
 }
 
+const fullTime = time => {
+    const timestamp = new Date(time);
+    return timestamp.toUTCString();
+}
+
 module.exports = {
     formatString,
     formatScheduleTime,
     formatScheduleDate,
+    fullTime
 };

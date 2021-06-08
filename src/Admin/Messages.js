@@ -16,7 +16,8 @@ export default function Messages(){
     useEffect(loadMessages, []);
 
     return(
-        <div>
+        <div className="messages">
+            <h3 className="messages-header">Messages</h3>
             {messages.map(message => {
                 return <Message message={message} />
             })}

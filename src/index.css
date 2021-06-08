@@ -17,6 +17,10 @@ code {
     monospace;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .S1KTitle,
 .social-media,
 .header-link,
@@ -26,13 +30,18 @@ code {
 .schedule-row,
 .schedule-element,
 .schedule-component,
-b {
+b, .message-component, .messages-header, .message {
   background: #ffeadb;
+}
+
+.messages, .player-name,
+.player-description, .player-card, .message-close, .submit {
+  background: black;
 }
 
 .social-media,
 .backdrop,
-.header-link, .submit {
+.header-link, .submit, .message-close {
   cursor: url(./SVG/reticule.svg), auto;
 }
 
@@ -130,13 +139,11 @@ h2 {
 
 .player-card {
   border-radius: 10%;
-  background: black;
   padding: 50px;
 }
 
 .player-name,
 .player-description {
-  background: black;
   color: #ffeadb;
 }
 
@@ -171,4 +178,127 @@ h2 {
 .schedule-component {
   display: flex;
   padding: 5px;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  background: black;
+  align-items: center;
+  width: 50%;
+  height: 50vh;
+  overflow: scroll;
+  margin: 30px;
+  margin-top: 200px;
+  border-radius: 25px;
+}
+
+.messages-header {
+  border-radius: 25px;
+  width: 400px;
+  font-size: 60px;
+  text-align: center;
+}
+
+.message {
+  border-radius: 25px;
+  width: 80%;
+  padding: 20px;
+  margin: 20px;
+}
+
+.message-close, .submit {
+  color: #ffeadb;
+  padding: 10px;
+  width: 40px;
+  text-align: center;
+  border-radius: 10px;
+  align-self: center;
+}
+
+.message-component {
+  margin: 5px;
+  font-weight:bold;
+}
+
+.message-body {
+  font-weight: normal;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.contact , .contact-form{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  background: #ffeadb;
+  outline: none;
+  resize: none;
+  overflow: scroll;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 30px;
+  border: 5px solid black;
+}
+
+.contact-component {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.submit {
+  width: 100px;
+}
+
+.contact {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.text-input {
+  width: 33%
+}
+
+.message-input {
+  width: 66%
+}
+
+.textarea {
+  height: 33vh;
+}
+
+.login-input {
+  margin: 10px;
+  padding: 10px;
+}
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-form-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.login-header {
+  font-size: 100px;
+  margin: 50px;
+}
+
+.contact-header {
+  font-size: 80px;
+  padding: 10px;
+  margin: 50px 0px;
 }
