@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Messages from "./Messages";
 import UpdateRoster from "./UpdateRoster";
-import UpdateSchedule from "./UpdateSchedule";
+import Schedule from "../Schedule/Schedule"
 
-export default function Dashboard() {
+export default function Dashboard( { admin } ) {
   const [adminComponent, setAdminComponent] = useState("");
 
   const audio = new Audio('./Sound/USP-S.mp3')
@@ -17,18 +17,18 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="dashboard">
-      <div className="dashboard-controller">
-        <div className="dashboard-button" onClick={clickHandler}>Messages</div>
-        <div className="dashboard-button" onClick={clickHandler}>Roster</div>
-        <div className="dashboard-button" onClick={clickHandler}>Schedule</div>
+    <div className="">
+      <div className="">
+        <div className="" onClick={clickHandler}>Messages</div>
+        <div className="" onClick={clickHandler}>Roster</div>
+        <div className="" onClick={clickHandler}>Schedule</div>
       </div>
       {adminComponent === "Messages" ? (
         <Messages />
       ) : adminComponent === "Roster" ? (
         <UpdateRoster />
       ) : adminComponent === "Schedule" ? (
-        <UpdateSchedule />
+        <Schedule admin={admin} />
       ) : null}
     </div>
   );

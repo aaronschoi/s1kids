@@ -32,6 +32,25 @@ const list = async (param, signal) => {
   return await fetchJson(url, { headers, signal }, []);
 };
 
+const read = async (id, param, signal) => {
+  const url = `${API_BASE_URL}/${param}/${id}`;
+  return await fetchJson(url, { headers, signal }, []);
+}
+
+const putOrPost = async (id, param, data, method, signal) => {
+  const url = `${API_BASE_URL}/${param}/${id}`;
+  return await fetchJson(
+    url,
+    {
+      body: JSON.stringify({ data }),
+      headers,
+      method: `${method}`,
+      signal,
+    },
+    []
+  );
+}
+
 const generalAPIcall = async (param, data, method, signal) => {
   const url = `${API_BASE_URL}/${param}`;
   return await fetchJson(
@@ -48,5 +67,7 @@ const generalAPIcall = async (param, data, method, signal) => {
 
 module.exports = {
   list,
-  generalAPIcall
+  read,
+  generalAPIcall,
+  putOrPost
 };

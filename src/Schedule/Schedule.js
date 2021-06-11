@@ -1,12 +1,31 @@
 import { useState, useEffect } from "react";
+import UpdateSchedule from "../Admin/UpdateSchedule";
 import { list } from "../utils/api";
-import {
-  formatScheduleDate,
-  formatScheduleTime,
-} from "../utils/formatting";
+import { formatScheduleDate, formatScheduleTime } from "../utils/formatting";
 
-export default function Roster() {
+export default function Schedule({ admin }) {
   const [schedule, setSchedule] = useState([]);
+  const [eventId, setEventId] = useState(-1);
+
+  const classNames = admin
+    ? {
+        schedule: "",
+        header: "",
+        body: "",
+        capsule: "",
+        capsulette: "",
+        sentence: "",
+        edit: "",
+      }
+    : {
+        schedule: "",
+        header: "",
+        body: "",
+        capsule: "",
+        capsulette: "",
+        sentence: "",
+        edit: "",
+      };
 
   const loadSchedule = () => {
     const controller = new AbortController();
@@ -17,22 +36,40 @@ export default function Roster() {
   useEffect(loadSchedule, []);
 
   return (
-    <div className="schedule">
-      <h2 className="schedule-title">Schedule</h2>
-      <div className="schedule-body">
-      {schedule.map(({day, time, timezone, map, enemy, players}, index) => {
-        return (
-          <div key={index} className="schedule-row">
-            <div className="schedule-component">
-            <div className="schedule-element"><b>{formatScheduleDate(day)}</b>{` - S1Kids versus `}<b>{enemy}</b>{` on `}<b>{map}</b>{` at `}<b>{formatScheduleTime(time, timezone)}</b></div>
-            </div>
-            <div className="schedule-component">
-            <div className="schedule-element">{`Players: ${players}`}</div>
-            </div>
+    <div className={classNames.schedule}>
+      {eventId < 0 ? (
+        <>
+          <h2 className={classNames.header}>Schedule</h2>
+          { admin ? <div onClick={() => setEventId(0)}>New Event</div> : null }
+          <div className={classNames.body}>
+            {schedule.map(({ event_id, day, time, timezone, map, enemy, players }) => {
+              return (
+                <div key={day + time + timezone} className={classNames.capsule}>
+                  <div className={classNames.capsulette}>
+                    <div className={classNames.sentence}>
+                      <b>{formatScheduleDate(day)}</b>
+                      {` - S1Kids versus `}
+                      <b>{enemy}</b>
+                      {` on `}
+                      <b>{map}</b>
+                      {` at `}
+                      <b>{formatScheduleTime(time, timezone)}</b>
+                    </div>
+                  </div>
+                  <div className={classNames.capsulette}>
+                    <div
+                      className={classNames.sentence}
+                    >{`Players: ${players}`}</div>
+                  </div>
+                  {admin ? <div className={classNames.edit} onClick={() => setEventId(Number(event_id))}>Edit</div> : null}
+                </div>
+              );
+            })}
           </div>
-        );
-      })}
-      </div>
+        </>
+      ) : (
+        <UpdateSchedule eventid={eventId} />
+      )}
     </div>
   );
 }

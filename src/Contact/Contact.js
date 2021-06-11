@@ -41,31 +41,31 @@ export default function Contact() {
   };
 
   return (
-    <div className="contact">
+    <div className="">
       <Success success={success} />
       <Error error={formError} />
       <h3 className="contact-header">Message Us!</h3>
-      <form onSubmit={submitHandler} className="contact-form">
-        <div className="contact-component text-input">
+      <form onSubmit={submitHandler} className="">
+        <div className="">
           <input
             name="from"
             type="text"
             value={formData.from}
             placeholder="From"
             onChange={changeHandler}
-            className="form-input"
+            className=""
           />
         </div>
-        <div className="contact-component message-input">
+        <div className="">
           <textarea
             name="message"
             value={formData.message}
             placeholder="Message"
             onChange={changeHandler}
-            className="form-input textarea"
+            className=""
           />
         </div>
-        <input type="submit" value="Submit" className="submit" />
+        <input type="submit" value="Submit" className="" />
       </form>
     </div>
   );

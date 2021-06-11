@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { list } from "../utils/api";
-import { generalAPIcall } from "../utils/api";
+import { list, generalAPIcall } from "../utils/api";
 import { fullTime } from "../utils/formatting";
 
 export default function Messages() {
@@ -22,24 +21,24 @@ export default function Messages() {
     event.preventDefault();
     audio.play();
     const controller = new AbortController();
-    const message_id = Number(event.target.getAttribute("messageId"))
+    const message_id = Number(event.target.getAttribute("messageid"))
     generalAPIcall("messages", {message_id}, "PUT", controller.signal)
     .then(()=> setSuccess(success+1))
     return () => controller.abort();
   };
 
   return (
-    <div className="messages">
-      <h3 className="messages-header">Messages</h3>
+    <div className="">
+      <h3 className="">Messages</h3>
       {messages.map(({ message_id, created_at, from, message }) => {
         return (
-          <div className="message">
-            <div className="message-component">
+          <div className="" key={message_id}>
+            <div className="">
               Timestamp: {fullTime(created_at)}
             </div>
-            <div className="message-component">From: {from}</div>
-            <div className="message-component message-body">{message}</div>
-            <div onClick={handleClose} className="message-close" messageId={message_id}>
+            <div className="">From: {from}</div>
+            <div className="">{message}</div>
+            <div onClick={handleClose} className="" messageid={message_id}>
               Close
             </div>
           </div>

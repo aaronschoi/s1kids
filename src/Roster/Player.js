@@ -3,9 +3,9 @@ export default function Player({
 }) {
   return (
     <>
-      <img className="player-icon" src={icon} alt={ign} />
-      <h3 className="player-name">{ign}</h3>
-      {description ? <p className="player-description">{description}</p> : null}
+      <img className="" src={icon} alt={ign} />
+      <h3 className="">{ign}</h3>
+      {description || description !== "" ? <p className="">{description}</p> : null}
     </>
   );
 }

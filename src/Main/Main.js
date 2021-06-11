@@ -9,18 +9,18 @@ export default function Main() {
   }
 
   return (
-    <div className="main">
+    <div className="">
       <h2>Welcome to HQ.</h2>
-      <p className="main-paragraph">Five Silver 1 Players and a Dream.</p>
-      <div className="backdrop-box">
+      <p className="">Five Silver 1 Players and a Dream.</p>
+      <div className="">
       <img
-        className="backdrop"
+        className=""
         src={require("../SVG/Terrorist-Line-Drawing.svg").default}
         alt="Terrorist"
         onClick={handleClick}
       />
       <img
-        className="backdrop"
+        className=""
         src={require("../SVG/Counter-Terrorist-Line-Drawing.svg").default}
         alt="Counter-Terrorist"
         onClick={handleClick}

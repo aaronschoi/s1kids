@@ -14,14 +14,14 @@ export default function Roster() {
   useEffect(loadRoster, []);
 
   return (
-    <div className="roster">
+    <div className="">
       <h2>Core</h2>
-      <div className="roster-component">
+      <div className="">
         {roster.map((player) => {
           if (player.group === "core") {
             return (
               <div
-                className="player-card"
+                className=""
                 key={player.player_id}
                 group={player.group}
               >
@@ -33,12 +33,12 @@ export default function Roster() {
         })}
       </div>
       <h2>Alternates</h2>
-      <div className="roster-component">
+      <div className="">
         {roster.map((player) => {
           if (player.group === "alternate") {
             return (
               <div
-                className="player-card"
+                className=""
                 key={player.player_id}
                 group={player.group}
               >

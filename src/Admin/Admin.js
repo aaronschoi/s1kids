@@ -32,20 +32,20 @@ export default function Admin() {
   };
 
   return (
-    <div className="admin">
+    <div className="">
       {!response ? (
-        <div className="login-form">
+        <div className="">
           <Error error={adminError} />
-          <h4 className="login-header">Login.</h4>
+          <h4 className="">Login.</h4>
           <h3>*Sorry but you'll have to relogin every time you want to enter this page.*</h3>
-          <form onSubmit={submitHandler} className="login-form-body">
+          <form onSubmit={submitHandler} className="">
               <input
                 name="username"
                 type="text"
                 value={loginInfo.username}
                 placeholder="Username"
                 onChange={changeHandler}
-                className="form-input login-input"
+                className=""
               />
               <input
                 name="password"
@@ -53,12 +53,12 @@ export default function Admin() {
                 value={loginInfo.password}
                 placeholder="Password"
                 onChange={changeHandler}
-                className="form-input login-input"
+                className=""
               />
-            <input type="submit" value="Submit" className="submit" />
+            <input type="submit" value="Submit" className="" />
           </form>
         </div>
-      ) : <Dashboard />}
+      ) : <Dashboard admin={response}/>}
     </div>
   );
 }
