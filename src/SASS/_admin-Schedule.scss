@@ -1,0 +1,26 @@
+.admin-schedule {
+    @include dashboard;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.admin-body {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.admin-capsule {
+    @include generalElement;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-sentence{
+    margin: 10px;
+}
+
+.new-event {
+    color: black;
+}

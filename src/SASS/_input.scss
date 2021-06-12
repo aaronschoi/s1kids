@@ -1,0 +1,11 @@
+.input {
+    @include generalElement;
+    @include input;
+    color: black;
+}
+
+.input:focus {
+    outline: none;
+    background: orange;
+    color: $light;
+}

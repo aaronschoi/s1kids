@@ -17,11 +17,11 @@ export default function Dashboard( { admin } ) {
   }
 
   return (
-    <div className="">
-      <div className="">
-        <div className="" onClick={clickHandler}>Messages</div>
-        <div className="" onClick={clickHandler}>Roster</div>
-        <div className="" onClick={clickHandler}>Schedule</div>
+    <div className="dashboard">
+      <div className="option-board">
+        <div className="dashboard-option" onClick={clickHandler}>Messages</div>
+        <div className="dashboard-option" onClick={clickHandler}>Roster</div>
+        <div className="dashboard-option" onClick={clickHandler}>Schedule</div>
       </div>
       {adminComponent === "Messages" ? (
         <Messages />

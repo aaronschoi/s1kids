@@ -1,6 +1,5 @@
 import { Switch, Route, Redirect } from "react-router-dom";
 import Main from "./Main/Main";
-import Header from "./Header/Header";
 import Roster from "./Roster/Roster";
 import Schedule from "./Schedule/Schedule";
 import NotFound from "./NotFound/NotFound";
@@ -9,9 +8,7 @@ import Contact from "./Contact/Contact";
 
 export default function App() {
   return (
-    <>
-      <Header />
-      <div className="content">
+    <div className="App">
         <Switch>
           <Route exact={true} path="/">
             <Redirect to={"/main"} />
@@ -35,7 +32,6 @@ export default function App() {
             <NotFound />
           </Route>
         </Switch>
-      </div>
-    </>
+    </div>
   );
 }

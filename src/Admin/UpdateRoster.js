@@ -25,14 +25,13 @@ export default function UpdateRoster() {
   };
 
   return (
-    <div className="">
+    <div className="update-roster">
       {playerId === 0 ? (
         <>
-        <h3 className="">Players</h3>
+        <h3 className="admin-header">Players</h3>
           {roster.map(({ player_id, ign, group }) => {
             return (
-              <div className="" key={player_id}>
-                <div key={player_id} className="">
+              <div className="update-roster-element" key={player_id}>
                   <div className="">{ign}{" : "} 
                     <b className={group}>{group}</b>
                   </div>
@@ -40,10 +39,9 @@ export default function UpdateRoster() {
                   key={player_id + "button"}
                   playerId={player_id}
                   onClick={clickHandler}
-                  className=""
+                  className="button blkbtn"
                 >
                   Edit
-                </div>
                 </div>
               </div>
             );

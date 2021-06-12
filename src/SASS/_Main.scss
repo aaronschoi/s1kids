@@ -1,0 +1,28 @@
+.main {
+    margin-top: 10vh;
+    text-align: center;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-header {
+    font-size: 80px;
+}
+
+.main-subheader {
+    font-size: 40px;
+}
+
+.csgo {
+    height: 70vh;
+    @include reticule;
+}
+
+@media #{$media-mobile} {
+    .csgo {
+        display: none;
+    }
+  }

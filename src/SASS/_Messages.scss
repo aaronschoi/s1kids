@@ -1,0 +1,32 @@
+.messages {
+    @include dashboard;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.message {
+    @include generalElement;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.message-detail {
+    font-weight: bold;
+    margin: 5px;
+}
+
+.message-body {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 25px;
+}
+
+.message-close {
+    color: $light;
+    background: black;
+}

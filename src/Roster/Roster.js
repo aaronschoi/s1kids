@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { list } from "../utils/api";
 import Player from "./Player";
+import Header from "../Header/Header"
 
 export default function Roster() {
   const [roster, setRoster] = useState([]);
@@ -14,6 +15,8 @@ export default function Roster() {
   useEffect(loadRoster, []);
 
   return (
+    <>
+    <Header />
     <div className="">
       <h2>Core</h2>
       <div className="">
@@ -50,5 +53,6 @@ export default function Roster() {
         })}
       </div>
     </div>
+    </>
   );
 }

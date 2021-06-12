@@ -1,0 +1,28 @@
+.header-icon {
+    height: 50px;
+    margin: 0px 20px;
+    @include reticule;
+}
+
+.header {
+    background: #ffedcc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.logo {
+    height: 70px;
+    margin-left: 10px;
+    @include reticule;
+}
+
+@media #{$media-mobile} {
+    .logo {
+        height: 55px;
+    }
+}

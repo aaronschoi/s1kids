@@ -1,0 +1,19 @@
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.player-icon {
+    border-radius: 50%;
+}
+
+.form-component-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+}
+
+.form-header {
+    font-size: 20px;
+    color: $light;
+}

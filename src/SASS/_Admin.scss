@@ -1,0 +1,17 @@
+.login {
+    background: black;
+    margin: 0px 20px;
+    padding: 20px;
+    border-radius: 25px;
+    max-width: 400px;
+    color: $light;
+}
+
+.login-subheader {
+    font-size: 15px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}

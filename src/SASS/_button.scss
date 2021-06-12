@@ -1,0 +1,24 @@
+.button {
+    @include generalElement;
+    @include input;
+    @include reticule;
+    width: 70px;
+    align-self: flex-end;
+    color: black;
+    text-align: center;
+}
+
+.button:hover {
+    background: orange;
+    color: $light;
+}
+
+.blkbtn {
+    color: $light;
+    background: black;
+}
+
+.button-group {
+    display: flex;
+    align-self: flex-end;
+}

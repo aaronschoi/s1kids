@@ -2,6 +2,7 @@ import { useState } from "react";
 import { generalAPIcall } from "../utils/api";
 import Error from "../Error/Error";
 import Dashboard from "./Dashboard";
+import Header from "../Header/Header"
 
 export default function Admin() {
   const [loginInfo, setLoginInfo] = useState({
@@ -32,20 +33,22 @@ export default function Admin() {
   };
 
   return (
-    <div className="">
+    <>
+    <Header />
+    <div className="main">
       {!response ? (
-        <div className="">
+        <div className="login">
           <Error error={adminError} />
-          <h4 className="">Login.</h4>
-          <h3>*Sorry but you'll have to relogin every time you want to enter this page.*</h3>
-          <form onSubmit={submitHandler} className="">
+          <h4 className="admin-header">Login.</h4>
+          <h3 className="login-subheader">*Sorry but you'll have to relogin every time you want to enter this page.*</h3>
+          <form className="login-form">
               <input
                 name="username"
                 type="text"
                 value={loginInfo.username}
                 placeholder="Username"
                 onChange={changeHandler}
-                className=""
+                className="input"
               />
               <input
                 name="password"
@@ -53,12 +56,13 @@ export default function Admin() {
                 value={loginInfo.password}
                 placeholder="Password"
                 onChange={changeHandler}
-                className=""
+                className="input"
               />
-            <input type="submit" value="Submit" className="" />
+            <div className="button" onClick={submitHandler}>Submit</div>
           </form>
         </div>
       ) : <Dashboard admin={response}/>}
     </div>
+    </>
   );
 }

@@ -1,0 +1,53 @@
+body {
+  background: orange;
+  margin: 0;
+  padding: 0;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+$light: #ffedcc;
+$media-mobile: "only screen and (max-width : 600px)";
+
+@mixin generalElement {
+  background: $light;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+@mixin input {
+  font-size: 20px;
+  margin: 10px;
+}
+
+@mixin reticule {
+  cursor: url("../SVG/reticule.svg") 16 -16, auto;
+}
+
+@mixin dashboard {
+  display: flex;
+    border: 1px solid $light;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+@import "Header";
+@import "hamburger";
+@import "admin-header";
+@import "form";
+@import "Main";
+@import "Admin";
+@import "input";
+@import "button";
+@import "Dashboard";
+@import "Messages";
+@import "admin-Schedule";
+@import "UpdateRoster";
+@import "EditPlayer";

@@ -1,0 +1,26 @@
+.dashboard {
+    background: black;
+    padding: 20px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.option-board {
+    @include dashboard;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.dashboard-option {
+    @include generalElement;
+    @include reticule;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.dashboard-option:hover {
+    background: orange;
+    font-weight: bold;
+}

@@ -2,6 +2,7 @@ import { useState } from "react";
 import Error from "../Error/Error";
 import { generalAPIcall } from "../utils/api";
 import Success from "./Success";
+import Header from "../Header/Header"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -41,6 +42,8 @@ export default function Contact() {
   };
 
   return (
+    <>
+    <Header />
     <div className="">
       <Success success={success} />
       <Error error={formError} />
@@ -68,5 +71,6 @@ export default function Contact() {
         <input type="submit" value="Submit" className="" />
       </form>
     </div>
+    </>
   );
 }
