@@ -8,23 +8,24 @@ export default function Schedule({ admin }) {
   const [schedule, setSchedule] = useState([]);
   const [eventId, setEventId] = useState(-1);
 
+  const audio = new Audio('./Sound/USP-S.mp3')
+  audio.volume = .1;
+
   const classNames = admin
     ? {
         schedule: "admin-schedule",
         header: "admin-header",
         body: "admin-body",
         capsule: "admin-capsule",
-        capsulette: "admin-capsulette",
         sentence: "admin-sentence",
         edit: "button blkbtn",
       }
     : {
-        schedule: "",
-        header: "",
-        body: "",
-        capsule: "",
-        capsulette: "",
-        sentence: "",
+        schedule: "main",
+        header: "public-header",
+        body: "admin-body",
+        capsule: "admin-capsule",
+        sentence: "admin-sentence",
         edit: "",
       };
 
@@ -36,6 +37,17 @@ export default function Schedule({ admin }) {
 
   useEffect(loadSchedule, []);
 
+  const handleNewButton = (event, event_id) => {
+    event.preventDefault();
+    audio.play();
+    if(event.target.innerHTML === "New"){
+    setEventId(0);
+    }
+    else{
+      setEventId(Number(event_id));
+    }
+  }
+
   return (
     <>
     { admin ? null : <Header /> }
@@ -43,7 +55,7 @@ export default function Schedule({ admin }) {
       {eventId < 0 ? (
         <>
           <h2 className={classNames.header}>Schedule</h2>
-          { admin ? <div onClick={() => setEventId(0)} className="button new-event">New</div> : null }
+          { admin ? <div onClick={handleNewButton} className="button new-event">New</div> : null }
           <div className={classNames.body}>
             {schedule.map(({ event_id, day, time, timezone, map, enemy, players }) => {
               return (
@@ -60,7 +72,7 @@ export default function Schedule({ admin }) {
                     <div
                       className={classNames.sentence}
                     >{`Players: ${players}`}</div>
-                  {admin ? <div className={classNames.edit} onClick={() => setEventId(Number(event_id))}>Edit</div> : null}
+                  {admin ? <div className={classNames.edit} onClick={event => handleNewButton(event, event_id)}>Edit</div> : null}
                 </div>
               );
             })}

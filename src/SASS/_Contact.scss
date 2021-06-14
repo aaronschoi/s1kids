@@ -1,0 +1,25 @@
+.contact-from {
+    max-width: 400px;
+}
+
+.contact-from:focus, .contact-message-body:focus, .contact-button:hover {
+    background: black;
+    color: $light;
+}
+
+.contact-message-body {
+    min-width: 800px;
+    min-height: 300px;
+}
+
+@media #{$media-mobile} {
+    .contact-message-body {
+        min-width: none;
+        min-height: none;
+        width: 100px;
+    }
+    .contact-from {
+        max-width: none;
+        width: 100px;
+    }
+}

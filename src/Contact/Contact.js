@@ -44,31 +44,27 @@ export default function Contact() {
   return (
     <>
     <Header />
-    <div className="">
+    <div className="main">
       <Success success={success} />
       <Error error={formError} />
-      <h3 className="contact-header">Message Us!</h3>
-      <form onSubmit={submitHandler} className="">
-        <div className="">
+      <h3 className="public-header">Message Us!</h3>
+      <form className="form">
           <input
             name="from"
             type="text"
             value={formData.from}
             placeholder="From"
             onChange={changeHandler}
-            className=""
+            className="input contact-from"
           />
-        </div>
-        <div className="">
           <textarea
             name="message"
             value={formData.message}
             placeholder="Message"
             onChange={changeHandler}
-            className=""
+            className="input contact-message-body"
           />
-        </div>
-        <input type="submit" value="Submit" className="" />
+        <div className="button contact-button" onClick={submitHandler}>Submit</div>
       </form>
     </div>
     </>

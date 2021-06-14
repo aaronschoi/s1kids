@@ -1,0 +1,51 @@
+.radio-container {
+    @include generalElement;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-size: 25px;
+}
+
+.radio-label {
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .checkmark {
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity .5s;
+    }
+
+    input:checked + .checkmark {
+       opacity: 1; 
+    }
+}
+
+.radio-label:hover {
+    background-color: orange;
+}
+
+.radio-element-name {
+    margin: 0px 10px;
+    font-weight: normal;
+}
+
+.radio {
+    display: none;
+}

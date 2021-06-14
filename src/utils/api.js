@@ -65,9 +65,16 @@ const generalAPIcall = async (param, data, method, signal) => {
   );
 }
 
+const destroy = async (id, param, signal) => {
+  const url = `${API_BASE_URL}/${param}/${id}`;
+  const options = { method: "DELETE", signal };
+  return await fetchJson(url, options);
+}
+
 module.exports = {
   list,
   read,
   generalAPIcall,
-  putOrPost
+  putOrPost,
+  destroy
 };

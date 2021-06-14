@@ -17,14 +17,14 @@ export default function Roster() {
   return (
     <>
     <Header />
-    <div className="">
-      <h2>Core</h2>
-      <div className="">
+    <div className="main">
+      <h2 className="public-header">Core</h2>
+      <div className="roster-element">
         {roster.map((player) => {
           if (player.group === "core") {
             return (
               <div
-                className=""
+                className="roster-player"
                 key={player.player_id}
                 group={player.group}
               >
@@ -35,13 +35,13 @@ export default function Roster() {
           return null;
         })}
       </div>
-      <h2>Alternates</h2>
-      <div className="">
+      <h2 className="public-header">Alternates</h2>
+      <div className="roster-element">
         {roster.map((player) => {
           if (player.group === "alternate") {
             return (
               <div
-                className=""
+                className="roster-player"
                 key={player.player_id}
                 group={player.group}
               >
