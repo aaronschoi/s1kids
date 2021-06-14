@@ -28,7 +28,7 @@ $media-mobile: "only screen and (max-width : 450px)";
 }
 
 @mixin reticule {
-  cursor: url("../SVG/reticule.svg") 16 -16, auto;
+  cursor: url("./SVG/reticule.svg") 16 -16, auto;
 }
 
 @mixin dashboard {
@@ -48,20 +48,20 @@ $media-mobile: "only screen and (max-width : 450px)";
   }
 }
 
-@import "Header";
-@import "hamburger";
-@import "admin-header";
-@import "error";
-@import "form";
-@import "radio";
-@import "Main";
-@import "Admin";
-@import "input";
-@import "button";
-@import "Dashboard";
-@import "Messages";
-@import "admin-Schedule";
-@import "UpdateRoster";
-@import "EditPlayer";
-@import "Contact";
-@import "Roster";
+@import "./SASS/Header";
+@import "./SASS/hamburger";
+@import "./SASS/admin-header";
+@import "./SASS/error";
+@import "./SASS/form";
+@import "./SASS/radio";
+@import "./SASS/Main";
+@import "./SASS/Admin";
+@import "./SASS/input";
+@import "./SASS/button";
+@import "./SASS/Dashboard";
+@import "./SASS/Messages";
+@import "./SASS/admin-Schedule";
+@import "./SASS/UpdateRoster";
+@import "./SASS/EditPlayer";
+@import "./SASS/Contact";
+@import "./SASS/Roster";
