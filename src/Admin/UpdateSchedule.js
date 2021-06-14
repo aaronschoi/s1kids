@@ -6,8 +6,8 @@ export default function UpdateSchedule({ eventid }) {
   const [eventData, setEventData] = useState({
     event_id: 0,
     site: "ESEA",
-    day: "",
-    time: "",
+    day: "2021-01-01",
+    time: "00:00",
     timezone: "PST",
     map: "",
     enemy: "",
