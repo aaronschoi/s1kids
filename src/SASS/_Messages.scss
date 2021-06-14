@@ -30,3 +30,9 @@
     color: $light;
     background: black;
 }
+
+@media #{$media-mobile} {
+    .messages {
+        background: black;
+    }
+}

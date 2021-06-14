@@ -47,7 +47,7 @@ export default function Contact() {
     <div className="main">
       <Success success={success} />
       <Error error={formError} />
-      <h3 className="public-header">Message Us!</h3>
+      <h3 className="public-header">{window.innerWidth < 500 ? "Contact" : "Message Us!"}</h3>
       <form className="form">
           <input
             name="from"

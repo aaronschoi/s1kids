@@ -39,7 +39,7 @@ export default function Admin() {
       {!response ? (
         <div className="login">
           <Error error={adminError} />
-          <h4 className="admin-header">Login.</h4>
+          <h4 className="admin-header login-header">Login.</h4>
           <h3 className="login-subheader">*Sorry but you'll have to relogin every time you want to enter this page.*</h3>
           <form className="login-form">
               <input
@@ -48,7 +48,7 @@ export default function Admin() {
                 value={loginInfo.username}
                 placeholder="Username"
                 onChange={changeHandler}
-                className="input"
+                className="input login-focus"
               />
               <input
                 name="password"
@@ -56,9 +56,9 @@ export default function Admin() {
                 value={loginInfo.password}
                 placeholder="Password"
                 onChange={changeHandler}
-                className="input"
+                className="input login-focus"
               />
-            <div className="button" onClick={submitHandler}>Submit</div>
+            <div className="button login-focus" onClick={submitHandler}>Submit</div>
           </form>
         </div>
       ) : <Dashboard admin={response}/>}

@@ -24,3 +24,12 @@
     background: orange;
     font-weight: bold;
 }
+
+@media #{$media-mobile} {
+    .dashboard {
+        background: orange;
+    }
+    .option-board {
+        background: black;
+    }
+}

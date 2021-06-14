@@ -24,3 +24,9 @@
 .new-event {
     color: black;
 }
+
+@media #{$media-mobile} {
+    .admin-schedule {
+        background: black;
+    }
+}

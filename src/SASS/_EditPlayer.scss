@@ -18,3 +18,8 @@
     color: $light;
 }
 
+@media #{$media-mobile} {
+    .icon-container {
+        flex-direction: column;
+    }
+}

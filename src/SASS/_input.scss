@@ -9,3 +9,9 @@
     background: orange;
     color: $light;
 }
+
+@media #{$media-mobile} {
+    .login-focus:focus {
+        background: black;
+    }
+}

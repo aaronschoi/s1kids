@@ -1,5 +1,6 @@
 .contact-from {
     max-width: 400px;
+    margin-right: 300px;
 }
 
 .contact-from:focus, .contact-message-body:focus, .contact-button:hover {
@@ -8,7 +9,6 @@
 }
 
 .contact-message-body {
-    min-width: 800px;
     min-height: 300px;
 }
 
@@ -16,10 +16,18 @@
     .contact-message-body {
         min-width: none;
         min-height: none;
-        width: 100px;
+        max-width: 300px;
+        margin: 0;
     }
     .contact-from {
         max-width: none;
-        width: 100px;
+        max-width: 300px;
+        margin: 10px 0;
     }
 }
+
+// @media #{$media-desktop} {
+//     .contact-from {
+//         margin-right: 300px;
+//     }
+// }

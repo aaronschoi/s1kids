@@ -48,6 +48,7 @@ export default function EditPlayer({ player_id }) {
   const updateHandler = (event) => {
     event.preventDefault();
     audio.play();
+    setResponseError(null);
     const controller = new AbortController();
     if (player_id !== 0) {
       putOrPost(player_id, "roster", player, "PUT", controller.signal)
@@ -74,6 +75,7 @@ export default function EditPlayer({ player_id }) {
   const deleteHandler = (event) => {
     event.preventDefault();
     audio.play();
+    setResponseError(null);
     const controller = new AbortController();
     const confirm = window.confirm(
       'You are about to get rid of a player. If that is what you truly desire, press the "OK" button.'

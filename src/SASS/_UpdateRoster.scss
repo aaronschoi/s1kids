@@ -20,3 +20,11 @@
 .alternate {
     color: red;
 }
+
+@media #{$media-mobile} {
+    .update-roster {
+        justify-content: center;
+        align-items: center;
+        background: black;
+    }
+}
