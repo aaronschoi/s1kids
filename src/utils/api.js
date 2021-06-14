@@ -1,5 +1,6 @@
+require('dotenv').config();
 const API_BASE_URL =
-  process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
+  process.env.REACT_APP_API_BASE_URL
 
 const headers = new Headers();
 headers.append("Content-Type", "application/json");
