@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { generalAPIcall, putOrPost, read, destroy } from "../utils/api";
+import { generalAPIcall, putOrPost, read, des } from "../utils/api";
 import Error from "../Error/Error";
 
 export default function EditPlayer({ player_id }) {
@@ -81,7 +81,7 @@ export default function EditPlayer({ player_id }) {
       'You are about to get rid of a player. If that is what you truly desire, press the "OK" button.'
     );
     if (confirm) {
-      destroy(player_id, "roster", controller.signal)
+      des(player_id, "roster", controller.signal)
         .then(() =>
           setSuccess({
             pp: true,

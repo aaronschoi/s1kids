@@ -27,17 +27,17 @@ const fetchJson = async (url, options, onCancel) => {
   }
 }
 
-const list = async (param, signal) => {
+export const list = async (param, signal) => {
   const url = `${API_BASE_URL}/${param}`;
   return await fetchJson(url, { headers, signal }, []);
 };
 
-const read = async (id, param, signal) => {
+export const read = async (id, param, signal) => {
   const url = `${API_BASE_URL}/${param}/${id}`;
   return await fetchJson(url, { headers, signal }, []);
 }
 
-const putOrPost = async (id, param, data, method, signal) => {
+export const putOrPost = async (id, param, data, method, signal) => {
   const url = `${API_BASE_URL}/${param}/${id}`;
   return await fetchJson(
     url,
@@ -51,7 +51,7 @@ const putOrPost = async (id, param, data, method, signal) => {
   );
 }
 
-const generalAPIcall = async (param, data, method, signal) => {
+export const generalAPIcall = async (param, data, method, signal) => {
   const url = `${API_BASE_URL}/${param}`;
   return await fetchJson(
     url,
@@ -65,16 +65,8 @@ const generalAPIcall = async (param, data, method, signal) => {
   );
 }
 
-const destroy = async (id, param, signal) => {
+export const des = async (id, param, signal) => {
   const url = `${API_BASE_URL}/${param}/${id}`;
   const options = { method: "DELETE", signal };
   return await fetchJson(url, options);
 }
-
-module.exports = {
-  list,
-  read,
-  generalAPIcall,
-  putOrPost,
-  destroy
-};
