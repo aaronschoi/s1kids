@@ -385,7 +385,8 @@ body {
   align-items: center; }
 
 .player-icon {
-  border-radius: 50%; }
+  border-radius: 50%;
+  max-height: 150px; }
 
 .form-component-container {
   display: flex;
